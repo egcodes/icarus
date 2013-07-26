@@ -90,6 +90,7 @@ class MainWindow(QtGui.QMainWindow, Ui_Form):
 		self.pushButtonServiceStop.clicked.connect(self.stopService)
 		self.pushButtonServiceRestart.clicked.connect(self.restartService)
 		self.pushButtonKillProcess.clicked.connect(self.killProcess)
+		self.pushButtonKillWindow.clicked.connect(self.killWindow)
 		self.pushButton.clicked.connect(self.shutdownWindow)
 		self.lineEditSearchProcess.textChanged.connect(self.searchProcess)
 		self.tableWidgetServices.itemClicked.connect(self.enableServiceButton)
@@ -451,7 +452,16 @@ class MainWindow(QtGui.QMainWindow, Ui_Form):
 						self.processCount -= 1
 					else:
 						self.statusBar().showMessage("Unsuccessfull: The process could not be kill...")
-				
+	
+	def killWindow(self):
+		QtCore.QTimer.singleShot(3000, self.killWindowCmd)
+		QtGui.QMessageBox().information(self, 'ICARUS', 
+			'Click a window to kill its process 3 seconds later.')
+		
+	
+	def killWindowCmd(self):
+		os.system('xkill')
+
 	def listProcessNonRoot(self):
 		if self.checkBoxProcessListOtherUser.isChecked():
 			for i in range(self.processCount):
