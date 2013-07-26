@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'mainwindowhost.ui'
 #
-# Created: Thu Jul 25 01:38:44 2013
-#      by: PyQt4 UI code generator 4.10.1
+# Created: Thu Jul 25 02:47:39 2013
+#      by: PyQt4 UI code generator 4.10
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -211,7 +211,7 @@ class Ui_Form(object):
         self.pushButtonKillProcess.setFont(font)
         self.pushButtonKillProcess.setObjectName(_fromUtf8("pushButtonKillProcess"))
         self.checkBoxProcessListOtherUser = QtGui.QCheckBox(self.tab_6)
-        self.checkBoxProcessListOtherUser.setGeometry(QtCore.QRect(430, 38, 131, 21))
+        self.checkBoxProcessListOtherUser.setGeometry(QtCore.QRect(520, 30, 141, 31))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Ubuntu"))
         font.setPointSize(8)
@@ -240,7 +240,7 @@ class Ui_Form(object):
         self.tableWidgetProcessList.horizontalHeader().setSortIndicatorShown(True)
         self.tableWidgetProcessList.horizontalHeader().setStretchLastSection(True)
         self.label_10 = QtGui.QLabel(self.tab_6)
-        self.label_10.setGeometry(QtCore.QRect(970, 50, 54, 15))
+        self.label_10.setGeometry(QtCore.QRect(950, 44, 54, 21))
         self.label_10.setObjectName(_fromUtf8("label_10"))
         self.lineEditSearchProcess = QtGui.QLineEdit(self.tab_6)
         self.lineEditSearchProcess.setGeometry(QtCore.QRect(1010, 40, 161, 25))
@@ -304,6 +304,14 @@ class Ui_Form(object):
         self.tableWidgetProcessStatus.horizontalHeader().setDefaultSectionSize(55)
         self.tableWidgetProcessStatus.horizontalHeader().setMinimumSectionSize(50)
         self.tableWidgetProcessStatus.verticalHeader().setVisible(False)
+        self.pushButtonKillWindow = QtGui.QPushButton(self.tab_6)
+        self.pushButtonKillWindow.setEnabled(True)
+        self.pushButtonKillWindow.setGeometry(QtCore.QRect(430, 30, 71, 31))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Ubuntu"))
+        font.setPointSize(8)
+        self.pushButtonKillWindow.setFont(font)
+        self.pushButtonKillWindow.setObjectName(_fromUtf8("pushButtonKillWindow"))
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap(_fromUtf8("images/process.png")), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.tabWidget.addTab(self.tab_6, icon3, _fromUtf8(""))
@@ -641,6 +649,7 @@ class Ui_Form(object):
         __sortingEnabled = self.tableWidgetProcessStatus.isSortingEnabled()
         self.tableWidgetProcessStatus.setSortingEnabled(False)
         self.tableWidgetProcessStatus.setSortingEnabled(__sortingEnabled)
+        self.pushButtonKillWindow.setText(_translate("Form", "Kill Window", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), _translate("Form", "Process", None))
         self.pushButtonServiceStop.setText(_translate("Form", "Stop", None))
         self.tableWidgetServices.setSortingEnabled(True)
@@ -664,8 +673,8 @@ class Ui_Form(object):
         self.textBrowserScreenshot.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Arial\'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+"</style></head><body style=\" font-family:\'Arial\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Form", "Terminal", None))
         self.label_5.setText(_translate("Form", "ICARUS", None))
         self.pushButton.setText(_translate("Form", "Exit", None))
