@@ -1,7 +1,7 @@
 monitorLocal
 ============
 
-monitor your local computer
+monitor your computer for process and services
 
 Screenshot
 ==========
