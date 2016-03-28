@@ -1,4 +1,4 @@
-monitorLocal
+Icarus
 ============
 
 monitor your computer for process and services
